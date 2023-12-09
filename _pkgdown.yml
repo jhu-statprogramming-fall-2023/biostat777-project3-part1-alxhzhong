@@ -1,0 +1,25 @@
+url: ~
+template:
+  bootstrap: 5.0
+  theme: atom-one-light
+  bslib:
+    base_font: {google: "Montserrat"}
+    light: "#CEFAD0"
+    navbar-hover-background-color: "#5ced73"
+navbar:
+  bg: light
+  type: light
+  components:
+    articles:
+      text: Articles
+      menu:
+      - text: 1. Introduction
+        href: articles/introduction.html
+      - text: 2. Mapping the US
+        href: articles/mapping.html
+      - text: 3. Advanced Mapping
+        href: articles/advanced-mapping.html
+authors:
+  Paolo Di Lorenzo:
+    href: https://dilorenzo.pl/
+

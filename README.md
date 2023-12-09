@@ -5,6 +5,19 @@
 
 View code used to generate these plots: [resources/examples.R](https://github.com/pdil/usmap/blob/master/resources/examples.R)
 
+## Housekeeping for 140.777
+This R package was written by Paolo Di Lorenzo, whose original GitHub repository can be found [here](https://github.com/pdil/usmap).
+
+The deployed website of this package can be found [here](https://jhu-statprogramming-fall-2022.github.io/biostat840-project3-pkgdown-alxhzhong).
+
+The five things customized in this package website are:
+
+1. Changed color of navbar to light green (and added css to make hover/active colors match)
+2. Changed main text font to Montserrat (similar to Avenir used in cartography)
+3. Added link to the author's website in the sidebar
+4. Added a favicon (taken from the author's own non-pkgdown package website)
+5. Re-ordered the articles to make numeric sense
+
 ## Purpose
 Typically in R it is difficult to create nice US [choropleths](https://en.wikipedia.org/wiki/Choropleth_map) that include Alaska and Hawaii. The functions presented here attempt to elegantly solve this problem by manually moving these states to a new location and providing a fortified data frame for mapping and visualization. This allows the user to easily add data to color the map.
 

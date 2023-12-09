@@ -1,0 +1,10 @@
+.navbar-dark .navbar-nav .nav-item>.nav-link:hover,
+.navbar-light .navbar-nav .nav-item>.nav-link:hover {
+  background:rgba(31,214,85,0.2);
+  color: #000;
+}
+
+.navbar-light .navbar-nav .active>.nav-link {
+  background:#00ab41;
+  color:#fff
+}
