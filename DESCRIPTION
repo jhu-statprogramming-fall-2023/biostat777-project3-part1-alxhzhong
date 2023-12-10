@@ -19,6 +19,7 @@ Imports:
     usmapdata,
     utils
 Suggests:
+    BAMMtools,
     covr,
     ggrepel,
     here,
