@@ -8,7 +8,7 @@ View code used to generate these plots: [resources/examples.R](https://github.co
 ## Housekeeping for 140.777
 This R package was written by Paolo Di Lorenzo, whose original GitHub repository can be found [here](https://github.com/pdil/usmap).
 
-The deployed website of this package can be found [here](https://jhu-statprogramming-fall-2022.github.io/biostat840-project3-pkgdown-alxhzhong).
+The deployed website of this package can be found [here](https://jhu-statprogramming-fall-2023.github.io/biostat777-project3-part1-alxhzhong/).
 
 The five things customized in this package website are:
 
