@@ -5,11 +5,15 @@ template:
   bslib:
     base_font: {google: "Montserrat"}
     light: "#CEFAD0"
-    navbar-hover-background-color: "#5ced73"
 navbar:
   bg: light
   type: light
+  structure:
+    left: [intro, reference, articles, tutorials, news, analysis]
   components:
+    analysis:
+      text: Example analysis
+      href: articles/example-analysis.html
     articles:
       text: Articles
       menu:

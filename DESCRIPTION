@@ -20,15 +20,19 @@ Imports:
     utils
 Suggests:
     covr,
+    dplyr,
     ggplot2,
     ggrepel,
+    here,
     knitr,
     proto,
+    purrr,
     rmarkdown,
     scales,
     sp,
     sf,
     stringr,
+    tidyr,
     testthat
 RoxygenNote: 7.2.3
 Roxygen: list(markdown = TRUE)
