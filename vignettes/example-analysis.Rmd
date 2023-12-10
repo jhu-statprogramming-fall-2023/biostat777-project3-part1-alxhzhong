@@ -35,7 +35,7 @@ This analysis aims to answer the question:
 
 * How does high/low forecast accuracy vary, especially spatially?
 
-We'll use the `usmap` package to map forecast error in the US (while including Alaska dna Hawaii).
+We'll use the `usmap` package to map forecast error in the US (while including Alaska and Hawaii).
 
 ## Data Import
 First, let's import the datasets: 
@@ -91,7 +91,7 @@ city_coords <- weather_forecasts %>%
 
 ### Descriptive plots
 First, let's see the spread of cities across the US:
-```{r}
+```{r fig.height=5, fig.width=7}
 # count by state
 plot_usmap(color = "grey25") +
   geom_point(data = city_coords, mapping = aes(x = x, y = y), color = "red")
@@ -99,7 +99,7 @@ plot_usmap(color = "grey25") +
 ```
 
 Next, let's look overall at how 12-hour forecast temperatures compare to observed temperatures:
-```{r cache=TRUE}
+```{r cache=TRUE, fig.height=5, fig.width=7}
 weather_forecasts %>% 
   filter(forecast_hours_before == 12) %>% 
   ggplot(mapping = aes(x = forecast_temp, y = observed_temp)) +
@@ -134,7 +134,7 @@ mean_errors <- weather_forecasts %>%
 ```
 
 Then, to map the mean error by city and high/low temperature:
-```{r}
+```{r fig.height=5, fig.width=7}
 jenks_breaks <- BAMMtools::getJenksBreaks(mean_errors$mean_error, 7) %>%
   scales::rescale(to = c(0,1))
 
