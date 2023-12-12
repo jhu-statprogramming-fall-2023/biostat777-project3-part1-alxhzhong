@@ -1,4 +1,4 @@
-pandoc: 3.1.1
+pandoc: 2.19.2
 pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
@@ -6,5 +6,8 @@ articles:
   example-analysis: example-analysis.html
   introduction: introduction.html
   mapping: mapping.html
-last_built: 2023-12-10T06:32Z
+last_built: 2023-12-12T23:14Z
+urls:
+  reference: https://jhu-statprogramming-fall-2023.github.io/biostat777-project3-part1-alxhzhong/reference
+  article: https://jhu-statprogramming-fall-2023.github.io/biostat777-project3-part1-alxhzhong/articles
 
