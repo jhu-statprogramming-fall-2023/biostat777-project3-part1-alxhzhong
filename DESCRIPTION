@@ -17,21 +17,26 @@ BugReports: https://github.com/pdil/usmap/issues
 Imports:
     rlang,
     usmapdata,
-    utils
+    utils,
+    stringr
 Suggests:
     BAMMtools,
     covr,
+    dplyr,
     ggrepel,
+    ggplot2,
     here,
     knitr,
     proto,
+    purrr,
     readr,
     rmarkdown,
     scales,
     sp,
     sf,
-    tidyverse,
-    testthat
+    testthat,
+    tidyr,
+    tidyverse
 RoxygenNote: 7.2.3
 Roxygen: list(markdown = TRUE)
 VignetteBuilder: knitr

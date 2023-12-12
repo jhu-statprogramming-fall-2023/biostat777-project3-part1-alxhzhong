@@ -20,7 +20,10 @@ knitr::opts_chunk$set(
 library(usmap)
 
 library(here)
-library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(purrr)
 ```
 
 To illustrate some of the functions in the `usmap` package, as well as functional programming using the `purrr` package, a dataset on weather forecast accuracy from Tidy Tuesday will be used.
@@ -28,7 +31,7 @@ To illustrate some of the functions in the `usmap` package, as well as functiona
 ## Dataset and data dictionaries
 The datasets used in this analysis come from the [12/20/2022 Tidy Tuesday GitHub repository](https://github.com/rfordatascience/tidytuesday/tree/master/data/2022/2022-12-20). Weather forecast and observation data was collected from the U.S. National Weather Service by the University of Illinois. This data was cleaned by [a team at Saint Louis University](https://github.com/speegled/weather_forecasts) and submitted to Tidy Tuesday by [Darrin Speegle](https://github.com/speegled).
 
-The data dictionary for `weather_forecasts.csv` can be found [here](https://github.com/rfordatascience/tidytuesday/tree/master/data/2022/2022-12-20#weather_forecastscsv), that for `cities.csv` can be found [here](https://github.com/rfordatascience/tidytuesday/tree/master/data/2022/2022-12-20#citiescsv).
+The data dictionary for `weather_forecasts.csv` can be found [here](https://github.com/rfordatascience/tidytuesday/tree/master/data/2022/2022-12-20#weather_forecastscsv), and that for `cities.csv` can be found [here](https://github.com/rfordatascience/tidytuesday/tree/master/data/2022/2022-12-20#citiescsv).
 
 ## Question
 This analysis aims to answer the question:
@@ -41,23 +44,23 @@ We'll use the `usmap` package to map forecast error in the US (while including A
 First, let's import the datasets: 
 ```{r}
 # create data folder if it doesn't exist
-if (!dir.exists(here("data"))){
-  dir.create(here("data"))
+if (!dir.exists(here("vignettes", "data"))){
+  dir.create(here("vignettes", "data"))
 }
 
 # load datasets if not already in data folder
-if (!file.exists(here("data", "raw_weather_forecasts.rda"))) {
+if (!file.exists(here("vignettes", "data", "raw_weather_forecasts.rda"))) {
     raw_weather_forecasts <- readr::read_csv('https://github.com/rfordatascience/tidytuesday/raw/master/data/2022/2022-12-20/weather_forecasts.csv')
     raw_cities <- readr::read_csv('https://github.com/rfordatascience/tidytuesday/raw/master/data/2022/2022-12-20/cities.csv')
     
 
     # save files to rda object
-    save(raw_weather_forecasts, file = here("data", "raw_weather_forecasts.rda"))
-    save(raw_cities, file = here("data", "raw_cities.rda"))
+    save(raw_weather_forecasts, file = here("vignettes", "data", "raw_weather_forecasts.rda"))
+    save(raw_cities, file = here("vignettes", "data", "raw_cities.rda"))
 }
 
-load(file = here("data", "raw_weather_forecasts.rda"))
-load(file = here("data", "raw_cities.rda"))
+load(file = here("vignettes", "data", "raw_weather_forecasts.rda"))
+load(file = here("vignettes", "data", "raw_cities.rda"))
 ```
 
 ## Data Wrangling
