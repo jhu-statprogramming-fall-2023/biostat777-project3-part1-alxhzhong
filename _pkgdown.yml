@@ -1,15 +1,22 @@
-url: ~
+url: https://jhu-statprogramming-fall-2023.github.io/biostat777-project3-part1-alxhzhong/
 template:
   bootstrap: 5.0
   theme: atom-one-light
   bslib:
-    base_font: {google: "Montserrat"}
-    light: "#CEFAD0"
+    base_font:
+      google: Montserrat
+    light: '#CEFAD0'
 navbar:
   bg: light
   type: light
   structure:
-    left: [intro, reference, articles, tutorials, news, analysis]
+    left:
+    - intro
+    - reference
+    - articles
+    - tutorials
+    - news
+    - analysis
   components:
     analysis:
       text: Example analysis
